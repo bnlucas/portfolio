@@ -4,18 +4,11 @@ layout: default.njk
 permalink: /resume/
 ---
 
-# Nathan Lucas
-Staff Software Engineer · Systems Architect · Open Source Contributor
-
-**[Email](mailto:nlucas@bnlucas.com)** • **[GitHub](https://github.com/bnlucas)** • **[LinkedIn](https://linkedin.com/in/bnlucas88)** • **[Download PDF](/static/resume.pdf)** • **[Back Home](/)**
-
----
+[📄 Download Resume (PDF)](https://bnlucas.com/static/Nathan-Lucas-Resume.pdf)
 
 ## Professional Summary
 
 Technical leader focused on scalable backend systems, cloud-native microservices, and API platforms in high-growth SaaS environments. Architects complex integrations, leads cross-functional initiatives, and mentors high-performing teams. Proven track record in system migrations, performance optimization, and fostering technical excellence and team growth. Builds resilient, production-grade systems. Driven by curiosity, clarity, and impact.
-
----
 
 ## Core Skills
 
@@ -23,8 +16,6 @@ Technical leader focused on scalable backend systems, cloud-native microservices
 - **Cloud & Infrastructure**: AWS, Docker, Kubernetes, Terraform, CI/CD pipelines, Kafka, RabbitMQ, Jenkins, Datadog, Databases (MySQL, PostgreSQL & MongoDB)
 - **Data & Operations**: SQL query optimization, Data migrations, Monitoring & alerting, Performance tuning
 - **Practices & Methodologies**: Microservices architecture, RESTful APIs, Code review & mentorship, Agile/Scrum, Test automation, Systems design, Process automation, Platform transitions, Service design
-
----
 
 ## Experience
 
@@ -65,8 +56,6 @@ Technical leader focused on scalable backend systems, cloud-native microservices
 - Engineered and automated internal tools that improved support team throughput by 15-20% and reduced reliance on manual workflows
 - Collaborated with Engineering to identify recurring issues, automate solutions, and reduce support load across the product portfolio
 - Developed scripting solutions for customer data cleanup/transformation, establishing a foundational technical base for engineering transition
-
----
 
 ## Additional Background
 
