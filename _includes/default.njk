@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ title or "Nathan Lucas" }}</title>
+  <link rel="stylesheet" href="/static/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+<header class="common-header">
+  <div class="common-header-photo">
+    <img src="/static/nathan-lucas.jpg" alt="Nathan Lucas Profile Photo" />
+  </div>
+
+  <h1>Nathan Lucas</h1>
+
+<p class="tagline">
+  Experienced engineer focused on scalable, maintainable systems
+</p>
+
+  <nav>
+    <ul class="header-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/projects/">Projects</a></li>
+      <li><a href="/resume/">Resume</a></li>
+      <li><a href="mailto:nlucas@bnlucas.com">Email</a></li>
+      <li><a href="https://github.com/bnlucas" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://linkedin.com/in/bnlucas88" target="_blank" rel="noopener">LinkedIn</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main class="content">
+    {{ content | safe }}
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Nathan Lucas</p>
+  </footer>
+</body>
+</html>
