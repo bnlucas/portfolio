@@ -81,6 +81,21 @@
       font-size: 0.95em;
     }
 
+    .profile-photo-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .profile-photo {
+      width: 192px;
+      height: 192px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: none;
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08);
+    }
+
     @media (max-width: 600px) {
       body {
         padding: 1.5rem 1rem;
@@ -88,17 +103,27 @@
       h1 { font-size: 1.75rem; }
       h2 { font-size: 1.25rem; }
       h3 { font-size: 1rem; }
+
+      .profile-photo {
+        width: 120px; /* Slightly smaller photo on mobile */
+        height: 120px;
+      }
     }
   </style>
 </head>
 <body>
   <main>
+    <div class="profile-photo-wrapper">
+      <img src="/static/nathan-lucas.jpg" alt="Nathan Lucas Profile Photo" class="profile-photo">
+    </div>
+    <hr> 
+
     <h1>Nathan Lucas</h1>
 <p><em>Staff Software Engineer | Systems Architect | Open Source Contributor</em></p>
-<p><strong><a href="mailto:nlucas@bnlucas.com">Email</a></strong> • <strong><a href="https://github.com/bnlucas">GitHub</a></strong> • <strong><a href="https://linkedin.com/in/bnlucas88">LinkedIn</a></strong> • <strong><a href="/resume.pdf">Download PDF</a></strong> • <strong><a href="/">Back Home</a></strong></p>
+<p><strong><a href="mailto:nlucas@bnlucas.com">Email</a></strong> • <strong><a href="https://github.com/bnlucas">GitHub</a></strong> • <strong><a href="https://linkedin.com/in/bnlucas88">LinkedIn</a></strong> • <strong><a href="/static/resume.pdf">Download PDF</a></strong> • <strong><a href="/">Back Home</a></strong></p>
 <hr>
 <h2>Professional Summary</h2>
-<p>Technical leader focused on scalable backend systems, cloud-native microservices, and API platforms in high-growth SaaS environments. Architects complex integrations, leads cross-functional initiatives, and mentors high-performing teamss. Proven track record in system migrations, performance optimization, and fostering technical excellence and team growth. Builds resilient, production-grade systems. Driven by curiosity, clarity, and impact.</p>
+<p>Technical leader focused on scalable backend systems, cloud-native microservices, and API platforms in high-growth SaaS environments. Architects complex integrations, leads cross-functional initiatives, and mentors high-performing teams. Proven track record in system migrations, performance optimization, and fostering technical excellence and team growth. Builds resilient, production-grade systems. Driven by curiosity, clarity, and impact.</p>
 <hr>
 <h2>Core Skills</h2>
 <ul>

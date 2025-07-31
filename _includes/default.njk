@@ -81,6 +81,21 @@
       font-size: 0.95em;
     }
 
+    .profile-photo-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .profile-photo {
+      width: 192px;
+      height: 192px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: none;
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08);
+    }
+
     @media (max-width: 600px) {
       body {
         padding: 1.5rem 1rem;
@@ -88,11 +103,21 @@
       h1 { font-size: 1.75rem; }
       h2 { font-size: 1.25rem; }
       h3 { font-size: 1rem; }
+
+      .profile-photo {
+        width: 120px; /* Slightly smaller photo on mobile */
+        height: 120px;
+      }
     }
   </style>
 </head>
 <body>
   <main>
+    <div class="profile-photo-wrapper">
+      <img src="/static/nathan-lucas.jpg" alt="Nathan Lucas Profile Photo" class="profile-photo">
+    </div>
+    <hr> {# Add the horizontal rule after the photo #}
+
     {{ content | safe }}
   </main>
 </body>

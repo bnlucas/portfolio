@@ -7,13 +7,13 @@ permalink: /resume/
 # Nathan Lucas
 _Staff Software Engineer | Systems Architect | Open Source Contributor_
 
-**[Email](mailto:nlucas@bnlucas.com)** • **[GitHub](https://github.com/bnlucas)** • **[LinkedIn](https://linkedin.com/in/bnlucas88)** • **[Download PDF](/resume.pdf)** • **[Back Home](/)**
+**[Email](mailto:nlucas@bnlucas.com)** • **[GitHub](https://github.com/bnlucas)** • **[LinkedIn](https://linkedin.com/in/bnlucas88)** • **[Download PDF](/static/resume.pdf)** • **[Back Home](/)**
 
 ---
 
 ## Professional Summary
 
-Technical leader focused on scalable backend systems, cloud-native microservices, and API platforms in high-growth SaaS environments. Architects complex integrations, leads cross-functional initiatives, and mentors high-performing teamss. Proven track record in system migrations, performance optimization, and fostering technical excellence and team growth. Builds resilient, production-grade systems. Driven by curiosity, clarity, and impact.
+Technical leader focused on scalable backend systems, cloud-native microservices, and API platforms in high-growth SaaS environments. Architects complex integrations, leads cross-functional initiatives, and mentors high-performing teams. Proven track record in system migrations, performance optimization, and fostering technical excellence and team growth. Builds resilient, production-grade systems. Driven by curiosity, clarity, and impact.
 
 ---
 
