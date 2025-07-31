@@ -10,15 +10,6 @@ yarn-error.log*
 package-lock.json # If you're not committing it or using npm <= 5
 .env # Environment variables
 
-# TypeScript
-# Compiled output
-dist/
-build/
-*.js
-*.js.map
-*.d.ts
-*.tsbuildinfo
-
 # IDEs and Editors
 # VS Code
 .vscode/
