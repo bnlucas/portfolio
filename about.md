@@ -16,7 +16,7 @@ My experience covers the full software lifecycle, with a focus on backend and pl
 
 - **Languages & Frameworks:** Ruby (Rails), TypeScript (Node.js & React), Python (Django & FastAPI), Java (Spring Boot)  
 - **Cloud & Infrastructure:** AWS, Docker, Kubernetes, Terraform, CI/CD pipelines, Kafka, RabbitMQ, Jenkins, Datadog  
-- **Databases:** MySQL, PostgreSQL, MongoDB  
+- **Databases:** MySQL, PostgreSQL, MongoDB, Redis  
 - **Practices & Methodologies:** Microservices Architecture, RESTful APIs, System Design, Data Migrations, Performance Tuning, Test Automation, Agile/Scrum, Code Review & Mentorship, Process & Platform Automation
 
 ## Driving Impact as a Staff Engineer
