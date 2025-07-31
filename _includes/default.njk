@@ -2,12 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
   <title>{{ title or "Nathan Lucas" }}</title>
+  <meta name="description" content="Nathan Lucas – Staff Software Engineer with expertise in scalable, maintainable systems.">
+  <meta name="author" content="Nathan Lucas">
+
+  <meta property="og:title" content="{{ title or 'Nathan Lucas' }}">
+  <meta property="og:description" content="Staff Software Engineer focused on scalable, maintainable systems.">
+  <meta property="og:image" content="https://bnlucas.com/static/profile.jpg">
+  <meta property="og:url" content="https://bnlucas.com{{ page.url or '/' }}">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title or 'Nathan Lucas' }}">
+  <meta name="twitter:description" content="Staff Software Engineer focused on scalable, maintainable systems.">
+  <meta name="twitter:image" content="https://bnlucas.com/static/profile.jpg">
+
+  <link rel="canonical" href="https://bnlucas.com{{ page.url or '/' }}">
+
+  <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
+  <link rel="manifest" href="/static/site.webmanifest">
+  <meta name="theme-color" content="#1A1A1A" />
+
   <link rel="stylesheet" href="/static/main.css" />
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d933ff43bf2c428c8d777a3290fa6bab"}'></script>
 </head>
+
 <body>
 <header class="common-header">
   <div class="common-header-photo">
