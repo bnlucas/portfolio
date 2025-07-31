@@ -13,7 +13,7 @@ Technical leader focused on scalable backend systems, cloud-native microservices
 ## Core Skills
 
 - **Languages & Frameworks**: Ruby (Rails), TypeScript (Node.js & React), Python (Django & FastAPI), Java (Spring Boot)
-- **Cloud & Infrastructure**: AWS, Docker, Kubernetes, Terraform, CI/CD pipelines, Kafka, RabbitMQ, Jenkins, Datadog, Databases (MySQL, PostgreSQL & MongoDB)
+- **Cloud & Infrastructure**: AWS, Docker, Kubernetes, Terraform, CI/CD pipelines, Kafka, RabbitMQ, Jenkins, Datadog, Databases (MySQL, PostgreSQL, MongoDB & Redis)
 - **Data & Operations**: SQL query optimization, Data migrations, Monitoring & alerting, Performance tuning
 - **Practices & Methodologies**: Microservices architecture, RESTful APIs, Code review & mentorship, Agile/Scrum, Test automation, Systems design, Process automation, Platform transitions, Service design
 
