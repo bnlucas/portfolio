@@ -19,6 +19,8 @@ Technical leader focused on scalable backend systems, cloud-native microservices
 
 ## Experience
 
+---
+
 ### LinkSquares, Inc. – Boston, MA 
 
 **Staff Software Engineer** · July 2023 – January 2025
@@ -31,6 +33,8 @@ Technical leader focused on scalable backend systems, cloud-native microservices
 - Designed and delivered strategic third-party integrations using RabbitMQ (after exploring Kafka), directly boosting customer retention and expansion
 - Collaborated with Architecture and DevOps to implement robust JWT standards across all services, enhancing security
 
+---
+
 ### Globalization Partners – Boston, MA
 
 **Senior Software Engineer** · August 2021 - April 2022
@@ -39,6 +43,8 @@ Technical leader focused on scalable backend systems, cloud-native microservices
 - Directed SQL optimization efforts for Postgres databases, reducing critical reporting load times by ~99% and significantly boosting business intelligence responsiveness
 - Architected and deployed automated payment reconciliation workflows, eliminating manual errors and saving the finance team 10–15 hours weekly
 - Established and enforced standardized development practices, cultivating scalable, maintainable team growth
+
+---
 
 ### Constant Contact – Loveland, CO & Boston, MA
 
@@ -56,6 +62,8 @@ Technical leader focused on scalable backend systems, cloud-native microservices
 - Engineered and automated internal tools that improved support team throughput by 15-20% and reduced reliance on manual workflows
 - Collaborated with Engineering to identify recurring issues, automate solutions, and reduce support load across the product portfolio
 - Developed scripting solutions for customer data cleanup/transformation, establishing a foundational technical base for engineering transition
+
+---
 
 ## Additional Background
 

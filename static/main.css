@@ -38,6 +38,12 @@ body {
   flex-direction: column;
 }
 
+hr {
+  height: 1px;
+  background-color: var(--color-text-footer);
+  border: none;
+}
+
 /* Header */
 .common-header {
   background-color: var(--color-bg-header);
