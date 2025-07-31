@@ -4,7 +4,7 @@ layout: default.njk
 permalink: /projects/
 ---
 
-## Open Source Contributions
+## Open Source Projects
 
 I actively maintain and contribute to open-source software focused on developer ergonomics, structured data modeling, and runtime efficiency. Below are some of the projects I have authored or led, which address gaps I encountered in real-world systems.
 

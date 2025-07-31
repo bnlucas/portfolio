@@ -1,19 +1,20 @@
 :root {
-  --color-bg: #121212;
-  --color-bg-header: #1e1e1e;
-  --color-bg-footer: #0a0a0a;
-  --color-border: #2a2a2a;
-  --color-text: #e0e0e0;
-  --color-text-muted: #a0a0a0;
-  --color-text-footer: #888888;
-  --color-accent: #4a90e2;       /* medium royal blue */
-  --color-accent-hover: #6ba3ff; /* lighter blue */
+  --color-bg: #1A1A1A; /* Slightly warmer dark grey */
+  --color-bg-header: #282828; /* Header slightly lighter */
+  --color-bg-footer: #101010;
+  --color-border: #383838; /* Darker warm grey border */
+  --color-text: #E8E8E8; /* Slightly brighter text */
+  --color-text-muted: #B0B0B0; /* Medium warm grey */
+  --color-text-footer: #A0A0A0; /* Slightly lighter footer text */
+  --color-accent: #88B0B0;       /* Soft Teal */
+  --color-accent-hover: #A0C0C0; /* Lighter Teal */
   --color-link: var(--color-accent);
 
-  --font-base-size: 17px; /* slightly smaller base size */
-  --font-header-size: 2.25rem; /* ~36px for h1 */
-  --font-subheader-size: 1.15rem; /* ~18.5px for tagline */
-  --font-content-size: 1.05rem; /* ~17px for body */
+  /* Font sizes remain the same */
+  --font-base-size: 17px;
+  --font-header-size: 2.25rem;
+  --font-subheader-size: 1.15rem;
+  --font-content-size: 1.05rem;
 }
 
 /* Reset & base */
