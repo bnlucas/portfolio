@@ -5,7 +5,7 @@ layout: default.njk
 
 # Nathan Lucas
 
-_Staff Software Engineer | Systems Architect | Open Source Contributor_
+_Staff Software Engineer · Systems Architect · Open Source Contributor_
 
 **[Email](mailto:nlucas@bnlucas.com)** • **[GitHub](https://github.com/bnlucas)** • **[LinkedIn](https://linkedin.com/in/bnlucas88)** • **[Resume](/resume/)**
 
