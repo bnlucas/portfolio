@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
+    "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
     "markdown-it-link-attributes": "^4.0.1"
   }
 }

@@ -13,7 +13,7 @@ Technical leader focused on scalable backend systems, cloud-native microservices
 ## Core Skills
 
 - **Languages & Frameworks**: Ruby (Rails), TypeScript (Node.js & React), Python (Django & FastAPI), Java (Spring Boot)
-- **Cloud & Infrastructure**: AWS, Docker, Kubernetes, Terraform, CI/CD pipelines, Kafka, RabbitMQ, Jenkins, Datadog, Databases (MySQL, PostgreSQL, MongoDB & Redis)
+- **Cloud & Infrastructure**: AWS, Docker, Kubernetes, Terraform, CI/CD pipelines, Kafka, RabbitMQ, Jenkins, Datadog, Databases (MySQL, PostgreSQL, MongoDB, & Redis)
 - **Data & Operations**: SQL query optimization, Data migrations, Monitoring & alerting, Performance tuning
 - **Practices & Methodologies**: Microservices architecture, RESTful APIs, Code review & mentorship, Agile/Scrum, Test automation, Systems design, Process automation, Platform transitions, Service design
 
@@ -21,14 +21,15 @@ Technical leader focused on scalable backend systems, cloud-native microservices
 
 ---
 
-### LinkSquares, Inc. – Boston, MA 
+### LinkSquares, Inc. – Boston, MA
+_Position eliminated due to company-wide layoffs._
 
 **Staff Software Engineer** · July 2023 – January 2025
 
 **Senior Software Engineer** · April 2022 – July 2023
 
-- Orchestrated a multi-phase, multi-team company-wide monolithic Ruby on Rails to microservices migration, improving deployment agility and standardizing technical patterns.
-- Transformed deployment cadence to efficient, on-demand ad-hoc microservice deploys (15-30 minutes) from hours-long weekly monolith deployments, drastically reducing time-to-market for new features and critical updates
+- Orchestrated a multi-phase, multi-team company-wide monolithic Ruby on Rails to microservices migration, improving deployment agility and standardizing technical patterns
+- Transformed deployment cadence to efficient, on-demand ad-hoc microservice deploys (15-30 minutes) from hours-long weekly monolith deployments, drastically reducing time-to-market
 - Mentored a team of 6 engineers and guided architectural decisions, elevating team delivery and code quality
 - Designed and delivered strategic third-party integrations using RabbitMQ (after exploring Kafka), directly boosting customer retention and expansion
 - Collaborated with Architecture and DevOps to implement robust JWT standards across all services, enhancing security
