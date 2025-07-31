@@ -5,7 +5,7 @@ permalink: /resume/
 ---
 
 # Nathan Lucas
-_Staff Software Engineer · Systems Architect · Open Source Contributor_
+Staff Software Engineer · Systems Architect · Open Source Contributor
 
 **[Email](mailto:nlucas@bnlucas.com)** • **[GitHub](https://github.com/bnlucas)** • **[LinkedIn](https://linkedin.com/in/bnlucas88)** • **[Download PDF](/static/resume.pdf)** • **[Back Home](/)**
 
