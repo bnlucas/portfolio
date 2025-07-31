@@ -10,6 +10,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "static/favicon-16x16.png": "favicon-16x16.png" });
   eleventyConfig.addPassthroughCopy({ "static/site.webmanifest": "site.webmanifest" });
 
+  eleventyConfig.addPassthroughCopy({"static": "static"});
+
   const milaOptions = {
     matcher: (href) => href.match(/^https?:\/\//),
     attrs: {
