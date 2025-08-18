@@ -11,10 +11,13 @@
   --color-link: var(--color-accent);
 
   /* Font sizes remain the same */
-  --font-base-size: 17px;
+  --font-base-size: 14px;
   --font-header-size: 2.25rem;
   --font-subheader-size: 1.15rem;
   --font-content-size: 1.05rem;
+
+  /* Content Widths */
+  --width-content: 720px;
 }
 
 /* Reset & base */
@@ -150,7 +153,7 @@ nav {
 /* Main content */
 .content {
   flex-grow: 1;
-  max-width: 720px;
+  max-width: var(--width-content);
   margin: 3rem auto 4rem;
   padding: 0 1.5rem;
   font-weight: 400;
@@ -183,7 +186,7 @@ nav {
 .footer {
   background-color: var(--color-bg-footer);
   text-align: center;
-  padding: 1rem 0;
+  padding: 3rem 0;
   font-size: 0.9rem;
   color: var(--color-text-footer);
   border-top: 1px solid var(--color-border);

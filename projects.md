@@ -29,3 +29,15 @@ A lightweight **type-safe data transfer object (DTO) and contract system** for R
 A flexible framework for **composable operations and service objects** in Ruby. It promotes structured application logic through **step pipelines, robust error handling with early exits, and integrated logging and duration tracking**.
 
 These libraries were developed independently and are not affiliated with any employer. Each reflects my commitment to clarity, performance, and maintainability.
+
+---
+
+## Experiments
+
+### [IsNathanAlive](https://github.com/bnlucas/isnathanalive) ([Live Site](https://isnathanalive.com)) (Next.js / IoT)
+
+A playful status-check site that integrates a **SwitchBot motion sensor** with **serverless functions (Vercel)** and **Upstash Redis**. When motion is detected, a timestamp is updated and surfaced on a website as a large, humorous message (e.g., “got dunks 2 days ago, still kickin”).
+
+While lighthearted in presentation, the project demonstrates practical use of **IoT webhooks**, **event filtering**, and **real-time serverless data pipelines**.
+
+This project showcases my ability to **blend hardware, serverless cloud architecture, and web frontend development**, all while maintaining a sense of humor.
