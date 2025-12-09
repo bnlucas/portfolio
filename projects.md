@@ -12,6 +12,10 @@ I actively maintain and contribute to open-source software focused on developer 
 
 A compact library for **reversible, fixed-length obfuscated key generation** from integers. It also supports **bit-packing multiple values** into single, compact identifiers using custom schemas.
 
+### [Corbel](https://github.com/bnlucas/corbel) (Python)
+
+A composable **dataclass extension and runtime modeling toolkit** for Python. Corbel provides mixins for **validation, immutable updates, hashing, comparison, and JSON serialization**, along with **property-level metadata via @corbel_property**. Designed for **structured data modeling with low overhead**.
+
 ### [Obfuskey.js](https://github.com/bnlucas/obfuskey-js) (TypeScript)
 
 A cross-platform port of the Python Obfuskey for JavaScript/TypeScript environments. It provides **reversible, fixed-length obfuscated key generation** and **bit-packing of multiple values** into compact identifiers, leveraging `BigInt` for arbitrary precision.
