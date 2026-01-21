@@ -21,6 +21,15 @@ Technical leader focused on scalable backend systems, cloud-native microservices
 
 ---
 
+### LILT, Inc. – Boston, MA
+_Team eliminated due to company restructuring._
+
+**Senior Software Engineer · September 2025 – January 2026
+
+- Led a security initiative to prevent sensitive customer data from being exposed in application logs, strengthening compliance and operational safety
+- Refactored a high-throughput job runner, reducing per-file processing time by ~96% (7s to 0.3s) and significantly improving system efficiency
+- Owned and maintained multiple backend services and plugins across Python, Java, TypeScript, and C#, supporting a complex, multi-language platform
+
 ### LinkSquares, Inc. – Boston, MA
 _Position eliminated due to company-wide layoffs._
 
