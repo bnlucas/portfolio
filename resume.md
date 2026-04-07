@@ -1,8 +1,8 @@
------
-
-## title: Nathan Lucas - Resume
+---
+title: Nathan Lucas - Resume
 layout: default.njk
 permalink: /resume/
+---
 
 [📄 Download Resume (PDF)](https://bnlucas.com/static/Nathan-Lucas-Resume.pdf)
 
