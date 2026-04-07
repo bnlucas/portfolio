@@ -20,7 +20,7 @@ Systems architect and platform engineer who builds production-grade infrastructu
 
 ## Experience
 
------
+---
 
 ### Skeptik.io
 
@@ -52,7 +52,7 @@ Self-funded, solo-built portfolio of infrastructure products and consumer applic
 - Built a multi-tenant WebSocket server with WAL-backed message retention and replay, designed as the transport layer for any application needing live communication
 - Kept the server zero-knowledge by treating message bodies as opaque bytes, pushing E2EE and encrypted search entirely to the client via WASM
 
------
+---
 
 ### LILT, Inc. – Boston, MA
 
@@ -62,7 +62,7 @@ Self-funded, solo-built portfolio of infrastructure products and consumer applic
 - Optimized the core job runner, reducing per-file processing time from 7s to 0.3s (~96% improvement) across the ingestion pipeline
 - Owned multiple backend services and plugins across Python, Java, TypeScript, and C#, operating as a generalist across a complex multi-language platform
 
------
+---
 
 ### LinkSquares, Inc. – Boston, MA
 
@@ -75,7 +75,7 @@ Self-funded, solo-built portfolio of infrastructure products and consumer applic
 - Designed and implemented JWT authentication standards adopted across all services in collaboration with Architecture and DevOps
 - Mentored a team of 6 engineers on architectural patterns, code quality, and service design
 
------
+---
 
 ### Globalization Partners – Boston, MA
 
@@ -86,7 +86,7 @@ Self-funded, solo-built portfolio of infrastructure products and consumer applic
 - Architected automated payment reconciliation workflows that eliminated manual errors and saved the finance team 10–15 hours weekly
 - Established standardized development practices across Java (Spring Boot) services for a growing engineering organization
 
------
+---
 
 ### Constant Contact – Loveland, CO & Boston, MA
 
@@ -102,7 +102,7 @@ Self-funded, solo-built portfolio of infrastructure products and consumer applic
 - Built internal automation tooling that improved support team throughput by 15–20%, establishing the technical foundation for a transition into engineering
 - Served as technical liaison between customers, support, and engineering — identifying systemic product issues and driving fixes upstream
 
------
+---
 
 ## Additional Background
 
