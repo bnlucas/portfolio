@@ -1,5 +1,5 @@
----
-title: Nathan Lucas - Resume
+----
+## title: Nathan Lucas - Resume
 layout: default.njk
 permalink: /resume/
 ---
@@ -26,38 +26,31 @@ Systems architect and platform engineer who builds production-grade infrastructu
 
 **Founder & Principal Engineer** · 2025 – Present
 
-Building a portfolio of composable infrastructure products and consumer applications as an independent, self-funded operation. All products are multi-tenant, deployed across dev/staging/production environments, and running in production.
+Self-funded, solo-built portfolio of infrastructure products and consumer applications. Four platforms, five-language SDK coverage, multi-tenant production deployments.
 
-**ShrouDB** — Cryptographic infrastructure platform (Rust)
+**ShrouDB** — Security infrastructure platform (Rust)
 
-- Designed and built 12 composable engines: credential envelopes (Sigil), encryption-as-a-service (Cipher), encrypted search via blind indices (Veil), secrets management (Keep), certificate authority (Forge), authorization (Sentry), audit trail (Chronicle), secure delivery (Courier), encrypted blob storage (Stash), and a unified API gateway (Moat) exposing all engines over RESP3 and HTTP
-- Implemented field-level crypto routing — developers annotate a schema and Sigil automatically applies the correct cryptographic treatment per field (Argon2id hashing, AES-256-GCM encryption, blind indexing, versioned secret storage) with fail-closed enforcement: PII fields without Cipher capability are rejected, not stored as plaintext
-- Built client-side E2EE via Cipher and Veil compiled to WASM, enabling encrypted search over encrypted data without server-side plaintext access
-- GDPR right-to-erasure implemented as crypto-shredding — delete the key, the data is mathematically irrecoverable
-- Automatic key rotation with REWRAP TTL jobs; ciphertext metadata (algorithm, key version) obfuscated via custom bit-packing library to eliminate metadata leakage
-- Clients generated for TypeScript, Python, Rust, Go, and Ruby from machine-readable protocol specifications via codegen
+- Architected a 12-engine cryptographic platform that replaces ad-hoc auth, encryption, and secrets management with a single unified gateway, eliminating the need to rebuild these primitives per project
+- Designed a schema-driven credential system where developers annotate fields and the platform automatically routes each to the correct cryptographic treatment — fail-closed, so PII cannot be stored without encryption
+- Shipped client-side E2EE via WASM, enabling users to encrypt data and search over it without the server ever accessing plaintext
+- Solved GDPR right-to-erasure through crypto-shredding, reducing deletion compliance from a cross-service data hunt to a single key destruction operation
 
-**Meterd** — Usage metering and quota enforcement platform (Rust)
+**Meterd** — Metering and quota enforcement platform (Rust)
 
-- Built a high-throughput event ingestion pipeline with in-memory aggregation (DashMap, 60s flush cycles), 7 aggregation strategies, and spike detection
-- Implemented atomic quota enforcement via Redis Lua scripts with two-phase reservation (reserve/commit/release), Postgres fallback, and configurable fail-open mode
-- Designed as an Envoy external processor for gateway-level rate limiting, quota enforcement, and usage metering before requests reach application code
-- REST (Axum) and gRPC (Tonic) APIs with full product catalog (applications, environments, features, plans), Stripe billing bridge, HMAC-signed webhook delivery, and Prometheus metrics
-- Circuit breaker on Postgres writes, dead-letter queue via Redis streams with automatic replay, graceful shutdown with in-flight drain
+- Built a gateway-layer metering engine that handles rate limiting, quota enforcement, and usage tracking as a single concern at the Envoy edge, before requests reach application code
+- Designed atomic quota checks with two-phase reservation semantics and automatic Postgres fallback when Redis is unavailable, ensuring billing accuracy without sacrificing availability
+- Integrated Stripe billing, webhook delivery, and a full product catalog (plans, features, per-customer overrides) to power usage-based pricing for downstream products
 
-**Simbee** — Behavioral matching and discovery platform (Ruby/Rails, Python/FastAPI)
+**Simbee** — Matching and discovery platform (Ruby/Rails, Python/FastAPI)
 
-- Architected a multi-service matching platform: graph service (social graph, affinities, signals, content feeds), discovery service (matching, clustering, campaigns), clustering service (SVD, HDBSCAN, FAISS), and account service (auth via ShrouDB Sigil, tenant management)
-- Designed a consent-scoped affinity model with directional preference modeling (identifies_as vs. interested_in), per-field visibility controls, and hard-limit exclusion constraints — enabling complementary matching for relationship and interest-based platforms
-- Built a dual-path matching pipeline: warm path using pairwise scoring over pgvector embeddings with FAISS approximate nearest neighbor search; cold start path blending trait compatibility, affinity overlap, and popularity signals with adaptive weighting
-- Implemented a campaign system with CPM/CPE pricing, A/B variant splitting, budget tracking, fair placement, and ranked feed interleaving
-- Self-correcting cluster infrastructure with drift monitoring (cosine distance from centroid), automatic re-clustering triggers, and stale embedding regeneration
+- Designed a consent-scoped matching platform where user affinities, signals, and preferences are isolated per context — enabling a single platform to power dating, professional networking, and community discovery without cross-contamination
+- Built a dual-path matching pipeline that transitions users from trait-based cold start matching to behavioral embedding-based scoring as signal history accumulates, improving match quality over time
+- Implemented a self-correcting clustering system that monitors drift and automatically triggers re-clustering when user behavior shifts, keeping recommendations current without manual intervention
 
 **Herald** — Real-time messaging platform (Rust)
 
-- Built a multi-tenant WebSocket server handling rooms, presence, message fan-out, and delivery with sequence-numbered WAL for retention and replay
-- Message bodies treated as opaque bytes — encryption and search handled client-side via Cipher/Veil WASM, enabling true E2EE where the server never sees plaintext
-- HTTP clients for TypeScript, Python, Rust, Go, and Ruby; WebSocket client for TypeScript with embedded WASM for client-held E2EE
+- Built a multi-tenant WebSocket server with WAL-backed message retention and replay, designed as the transport layer for any application needing live communication
+- Kept the server zero-knowledge by treating message bodies as opaque bytes, pushing E2EE and encrypted search entirely to the client via WASM
 
 -----
 
