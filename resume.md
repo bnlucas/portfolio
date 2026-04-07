@@ -1,82 +1,116 @@
----
-title: Nathan Lucas - Resume
+-----
+
+## title: Nathan Lucas - Resume
 layout: default.njk
 permalink: /resume/
----
 
 [📄 Download Resume (PDF)](https://bnlucas.com/static/Nathan-Lucas-Resume.pdf)
 
 ## Professional Summary
 
-Technical leader focused on scalable backend systems, cloud-native microservices, and API platforms in high-growth SaaS environments. Architects complex integrations, leads cross-functional initiatives, and mentors high-performing teams. Proven track record in system migrations, performance optimization, and fostering technical excellence and team growth. Builds resilient, production-grade systems. Driven by curiosity, clarity, and impact.
+Systems architect and platform engineer who builds production-grade infrastructure from scratch. Designed and shipped a composable cryptographic platform (12 engines, Rust), a behavioral matching engine, a real-time messaging system, and a metering platform — all running in production as multi-tenant services. A decade of backend engineering across Ruby, Python, TypeScript, Java, and Rust, with a track record of owning the hardest problems in the room: system-wide architectural migrations, billing pipelines nobody could crack, and integrations that became core revenue drivers. Progressed from Tier 1 support to Staff Engineer by consistently building things that outlast the team that shipped them.
 
 ## Core Skills
 
-- **Languages & Frameworks**: Ruby (Rails), TypeScript (Node.js & React), Python (Django & FastAPI), Java (Spring Boot)
-- **Cloud & Infrastructure**: AWS, Docker, Kubernetes, Terraform, CI/CD pipelines, Kafka, RabbitMQ, Jenkins, Datadog, Databases (MySQL, PostgreSQL, MongoDB, & Redis)
-- **Data & Operations**: SQL query optimization, Data migrations, Monitoring & alerting, Performance tuning
-- **Practices & Methodologies**: Microservices architecture, RESTful APIs, Code review & mentorship, Agile/Scrum, Test automation, Systems design, Process automation, Platform transitions, Service design
+- **Languages**: Rust, Ruby, TypeScript, Python, Java
+- **Frameworks**: Rails, React, Node.js, FastAPI, Django, Spring Boot, Axum, Tonic
+- **Infrastructure**: AWS, Docker, Kubernetes, Terraform, CI/CD, Envoy, PostgreSQL, Redis, RabbitMQ, Kafka, NATS
+- **Domains**: Cryptographic systems, distributed architecture, API platform design, microservices migration, billing and metering, real-time messaging, search and matching systems
+- **Practices**: Systems design, service-oriented architecture, protocol design, SDK and client generation, performance optimization, mentorship
 
 ## Experience
 
----
+-----
+
+### Skeptik.io
+
+**Founder & Principal Engineer** · 2025 – Present
+
+Building a portfolio of composable infrastructure products and consumer applications as an independent, self-funded operation. All products are multi-tenant, deployed across dev/staging/production environments, and running in production.
+
+**ShrouDB** — Cryptographic infrastructure platform (Rust)
+
+- Designed and built 12 composable engines: credential envelopes (Sigil), encryption-as-a-service (Cipher), encrypted search via blind indices (Veil), secrets management (Keep), certificate authority (Forge), authorization (Sentry), audit trail (Chronicle), secure delivery (Courier), encrypted blob storage (Stash), and a unified API gateway (Moat) exposing all engines over RESP3 and HTTP
+- Implemented field-level crypto routing — developers annotate a schema and Sigil automatically applies the correct cryptographic treatment per field (Argon2id hashing, AES-256-GCM encryption, blind indexing, versioned secret storage) with fail-closed enforcement: PII fields without Cipher capability are rejected, not stored as plaintext
+- Built client-side E2EE via Cipher and Veil compiled to WASM, enabling encrypted search over encrypted data without server-side plaintext access
+- GDPR right-to-erasure implemented as crypto-shredding — delete the key, the data is mathematically irrecoverable
+- Automatic key rotation with REWRAP TTL jobs; ciphertext metadata (algorithm, key version) obfuscated via custom bit-packing library to eliminate metadata leakage
+- Clients generated for TypeScript, Python, Rust, Go, and Ruby from machine-readable protocol specifications via codegen
+
+**Meterd** — Usage metering and quota enforcement platform (Rust)
+
+- Built a high-throughput event ingestion pipeline with in-memory aggregation (DashMap, 60s flush cycles), 7 aggregation strategies, and spike detection
+- Implemented atomic quota enforcement via Redis Lua scripts with two-phase reservation (reserve/commit/release), Postgres fallback, and configurable fail-open mode
+- Designed as an Envoy external processor for gateway-level rate limiting, quota enforcement, and usage metering before requests reach application code
+- REST (Axum) and gRPC (Tonic) APIs with full product catalog (applications, environments, features, plans), Stripe billing bridge, HMAC-signed webhook delivery, and Prometheus metrics
+- Circuit breaker on Postgres writes, dead-letter queue via Redis streams with automatic replay, graceful shutdown with in-flight drain
+
+**Simbee** — Behavioral matching and discovery platform (Ruby/Rails, Python/FastAPI)
+
+- Architected a multi-service matching platform: graph service (social graph, affinities, signals, content feeds), discovery service (matching, clustering, campaigns), clustering service (SVD, HDBSCAN, FAISS), and account service (auth via ShrouDB Sigil, tenant management)
+- Designed a consent-scoped affinity model with directional preference modeling (identifies_as vs. interested_in), per-field visibility controls, and hard-limit exclusion constraints — enabling complementary matching for relationship and interest-based platforms
+- Built a dual-path matching pipeline: warm path using pairwise scoring over pgvector embeddings with FAISS approximate nearest neighbor search; cold start path blending trait compatibility, affinity overlap, and popularity signals with adaptive weighting
+- Implemented a campaign system with CPM/CPE pricing, A/B variant splitting, budget tracking, fair placement, and ranked feed interleaving
+- Self-correcting cluster infrastructure with drift monitoring (cosine distance from centroid), automatic re-clustering triggers, and stale embedding regeneration
+
+**Herald** — Real-time messaging platform (Rust)
+
+- Built a multi-tenant WebSocket server handling rooms, presence, message fan-out, and delivery with sequence-numbered WAL for retention and replay
+- Message bodies treated as opaque bytes — encryption and search handled client-side via Cipher/Veil WASM, enabling true E2EE where the server never sees plaintext
+- HTTP clients for TypeScript, Python, Rust, Go, and Ruby; WebSocket client for TypeScript with embedded WASM for client-held E2EE
+
+-----
 
 ### LILT, Inc. – Boston, MA
-_Team eliminated due to company restructuring._
 
 **Senior Software Engineer** · September 2025 – January 2026
 
-- Led a security initiative to prevent sensitive customer data from being exposed in application logs, strengthening compliance and operational safety
-- Refactored a high-throughput job runner, reducing per-file processing time by ~96% (7s to 0.3s) and significantly improving system efficiency
-- Owned and maintained multiple backend services and plugins across Python, Java, TypeScript, and C#, supporting a complex, multi-language platform
+- Designed and deployed a worker-based ingestion pipeline serving 50+ content connectors, replacing a fragile synchronous flow with a scalable async architecture
+- Optimized the core job runner, reducing per-file processing time from 7s to 0.3s (~96% improvement) across the ingestion pipeline
+- Owned multiple backend services and plugins across Python, Java, TypeScript, and C#, operating as a generalist across a complex multi-language platform
+
+-----
 
 ### LinkSquares, Inc. – Boston, MA
-_Position eliminated due to company-wide layoffs._
 
 **Staff Software Engineer** · July 2023 – January 2025
 
 **Senior Software Engineer** · April 2022 – July 2023
 
-- Orchestrated a multi-phase, multi-team company-wide monolithic Ruby on Rails to microservices migration, improving deployment agility and standardizing technical patterns
-- Transformed deployment cadence to efficient, on-demand ad-hoc microservice deploys (15-30 minutes) from hours-long weekly monolith deployments, drastically reducing time-to-market
-- Mentored a team of 6 engineers and guided architectural decisions, elevating team delivery and code quality
-- Designed and delivered strategic third-party integrations using RabbitMQ (after exploring Kafka), directly boosting customer retention and expansion
-- Collaborated with Architecture and DevOps to implement robust JWT standards across all services, enhancing security
+- Served as the integration architect responsible for the company’s entire third-party integration offerings — designed the event-driven architecture (RabbitMQ), extracted Salesforce integration and notification systems from two monoliths, and defined the patterns that enabled the organization’s transition to microservices
+- Reduced deployment cycle from weekly hours-long monolith releases to on-demand microservice deploys (15–30 minutes), directly accelerating feature delivery across the engineering org
+- Designed and implemented JWT authentication standards adopted across all services in collaboration with Architecture and DevOps
+- Mentored a team of 6 engineers on architectural patterns, code quality, and service design
 
----
+-----
 
 ### Globalization Partners – Boston, MA
 
-**Senior Software Engineer** · August 2021 - April 2022
+**Senior Software Engineer** · August 2021 – April 2022
 
-- Enhanced system observability, reliability, and automation across critical internal platforms supporting finance, reporting, and engineering workflows using Java (Spring Boot)
-- Directed SQL optimization efforts for Postgres databases, reducing critical reporting load times by ~99% and significantly boosting business intelligence responsiveness
-- Architected and deployed automated payment reconciliation workflows, eliminating manual errors and saving the finance team 10–15 hours weekly
-- Established and enforced standardized development practices, cultivating scalable, maintainable team growth
+- Built the credits pipeline in the billing flow — a problem the team had been unable to solve — enabling accurate credit tracking across the platform’s global payroll operations
+- Reduced critical Postgres reporting query times by ~99% through systematic query optimization and indexing, unblocking the business intelligence team’s reporting workflows
+- Architected automated payment reconciliation workflows that eliminated manual errors and saved the finance team 10–15 hours weekly
+- Established standardized development practices across Java (Spring Boot) services for a growing engineering organization
 
----
+-----
 
 ### Constant Contact – Loveland, CO & Boston, MA
 
 **Associate Software Engineer → Senior Software Engineer** · May 2018 – August 2021
 
-- Co-led a company-wide React frontend architectural transition, significantly improving code consistency and accelerating development velocity across engineering teams
-- Developed and maintained scalable Java (Spring Boot) backend APIs supporting core customer features and strategic third-party integrations
-- Collaborated cross-functionally with Product and Design to deliver impactful full-stack experiences with measurable user engagement using React and MySQL
-- Executed strategic refactoring of legacy systems to reduce technical debt, enhance stability, and streamline onboarding across key components
-- Provided active mentorship to junior engineers and codified best practices for team scalability
+- Sole developer of the Facebook Ads integration — designed, built, and maintained a revenue-critical feature connecting Constant Contact’s platform to Facebook’s advertising APIs
+- Co-led the company-wide React frontend migration, defining architectural patterns adopted across engineering teams
+- Built and maintained Java (Spring Boot) backend APIs powering core customer features and third-party integrations
+- Mentored junior engineers and established team-wide coding standards and review practices
 
 **Customer Engagement Specialist → Senior VOC Technical Engineer** · August 2015 – May 2018
 
-- Served as a technical liaison between customers, support, and engineering, driving systemic product improvements
-- Engineered and automated internal tools that improved support team throughput by 15-20% and reduced reliance on manual workflows
-- Collaborated with Engineering to identify recurring issues, automate solutions, and reduce support load across the product portfolio
-- Developed scripting solutions for customer data cleanup/transformation, establishing a foundational technical base for engineering transition
+- Built internal automation tooling that improved support team throughput by 15–20%, establishing the technical foundation for a transition into engineering
+- Served as technical liaison between customers, support, and engineering — identifying systemic product issues and driving fixes upstream
 
----
+-----
 
 ## Additional Background
 
-My formal engineering career began in 2018, building on decades of self-directed programming and several years in technical operations and customer-facing roles. That path shaped my systems-aware mindset and a practical intuition for edge cases, reliability, and supportability.
-
-Progressing from Tier 1 Support to Staff Engineer, I have consistently focused on improving the structure and quality of the systems I work with. Whether through service architecture, developer tooling, or deployment processes, I approach engineering with curiosity, clarity, and pragmatism to help teams scale their code and their practices.
+My formal engineering career began in 2018, building on decades of self-directed programming and several years in technical operations. Progressing from Tier 1 support to Staff Engineer shaped a practical intuition for reliability, edge cases, and building systems that work under real-world pressure — the same instinct that drives the infrastructure I build independently today.
