@@ -1,4 +1,4 @@
-----
+---
 ## title: Nathan Lucas - Resume
 layout: default.njk
 permalink: /resume/
