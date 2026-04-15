@@ -24,32 +24,35 @@ Systems architect and platform engineer who builds production-grade infrastructu
 
 ### Skeptik.io
 
-**Founder & Principal Engineer** · 2025 – Present
+**Founder & Principal Engineer** · January 2026 – Present
 
-Self-funded, solo-built portfolio of infrastructure products and consumer applications. Four platforms, five-language SDK coverage, multi-tenant production deployments.
+Self-funded, solo-built portfolio of four independent back-end products, each designed to solve one problem end-to-end. Protocol-first design with codegen-driven SDKs across six languages (TypeScript, Python, Ruby, Go, PHP, C#), multi-tenant production deployments.
 
 **ShrouDB** — Security infrastructure platform (Rust)
 
-- Architected a 12-engine cryptographic platform that replaces ad-hoc auth, encryption, and secrets management with a single unified gateway, eliminating the need to rebuild these primitives per project
+- Architected a 9-engine security infrastructure platform (credentials, encryption, secrets, encrypted object storage, encrypted search, internal CA, authorization, secure notifications, audit) that replaces the usual seven-vendor stack with a single binary — one auth model, one config format, one telemetry pipeline
 - Designed a schema-driven credential system where developers annotate fields and the platform automatically routes each to the correct cryptographic treatment — fail-closed, so PII cannot be stored without encryption
+- Benchmarked at 44K JWT verifications/sec and 33K encrypt/decrypt ops/sec with sub-millisecond latency; AES-256-GCM with per-tenant key isolation baked into the storage layer
 - Shipped client-side E2EE via WASM, enabling users to encrypt data and search over it without the server ever accessing plaintext
 - Solved GDPR right-to-erasure through crypto-shredding, reducing deletion compliance from a cross-service data hunt to a single key destruction operation
 
 **Meterd** — Metering and quota enforcement platform (Rust)
 
-- Built a gateway-layer metering engine that handles rate limiting, quota enforcement, and usage tracking as a single concern at the Envoy edge, before requests reach application code
-- Designed atomic quota checks with two-phase reservation semantics and automatic Postgres fallback when Redis is unavailable, ensuring billing accuracy without sacrificing availability
+- Built a gateway-layer metering engine that handles rate limiting, quota enforcement, and usage tracking as a single concern at the Envoy edge, before requests reach application code — sustaining ~10K events/sec per tenant
+- Designed atomic Redis Lua quota checks with two-phase reservation semantics and automatic Postgres fallback when Redis is unavailable, ensuring billing accuracy without sacrificing availability
+- Shipped five pricing models (flat, graduated, volume, package, weighted) plus a credits system with FIFO burn and contract drawdown, covering the full range of usage-based billing patterns
 - Integrated Stripe billing, webhook delivery, and a full product catalog (plans, features, per-customer overrides) to power usage-based pricing for downstream products
 
 **Simbee** — Matching and discovery platform (Ruby/Rails, Python/FastAPI)
 
-- Designed a consent-scoped matching platform where user affinities, signals, and preferences are isolated per context — enabling a single platform to power dating, professional networking, and community discovery without cross-contamination
-- Built a dual-path matching pipeline that transitions users from trait-based cold start matching to behavioral embedding-based scoring as signal history accumulates, improving match quality over time
+- Designed a consent-scoped matching platform across five microservices behind an Envoy gateway, where user affinities, signals, and preferences are isolated per context — enabling a single platform to power dating, professional networking, and community discovery without cross-contamination
+- Built a dual-path matching pipeline using FAISS for candidate retrieval and HDBSCAN for behavioral clustering, transitioning users from trait-based cold start to embedding-based scoring as signal history accumulates — with 35+ scoring parameters tunable without shipping code
 - Implemented a self-correcting clustering system that monitors drift and automatically triggers re-clustering when user behavior shifts, keeping recommendations current without manual intervention
 
 **Herald** — Real-time messaging platform (Rust)
 
-- Built a multi-tenant WebSocket server with WAL-backed message retention and replay, designed as the transport layer for any application needing live communication
+- Built a multi-tenant WebSocket server with embedded WAL storage — no Redis, no broker, no external retry queue — sustaining ~8K msg/sec at 0.1ms p50 latency with 7-day reconnect-and-replay
+- Designed pluggable auth, presence, and chat engines shipped as composable Docker images (transport-only, chat, presence, full stack), so downstream products adopt only what they need
 - Kept the server zero-knowledge by treating message bodies as opaque bytes, pushing E2EE and encrypted search entirely to the client via WASM
 
 ---
