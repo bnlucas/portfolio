@@ -60,6 +60,15 @@ SDKs: TypeScript, Python, Ruby.
 
 Open-source tooling focused on **runtime data modeling, service boundaries, and operational clarity** — the same instincts that drive the platform work above.
 
+### [Obfuskey](https://obfuskey.skeptik.io)
+
+Reversible, fixed-length obfuscated key generation from integers with bit-packing support — four language ports sharing a single spec and test surface.
+
+- **[obfuskey](https://github.com/bnlucas/obfuskey)** — Python (reference implementation).
+- **[obfuskey-js](https://github.com/bnlucas/obfuskey-js)** — TypeScript, `BigInt`-based, safe across frontend, Node, and edge runtimes.
+- **[obfuskey-rs](https://github.com/bnlucas/obfuskey-rs)** — Rust.
+- **[obfuskey-rb](https://github.com/bnlucas/obfuskey-rb)** — Ruby.
+
 ### Ruby
 
 - **[Cattri](https://github.com/bnlucas/cattri)** — class and instance attributes with strict semantics: inheritance, lazy defaults, `final` (write-once) values, fine-grained visibility and coercion control.
@@ -69,11 +78,6 @@ Open-source tooling focused on **runtime data modeling, service boundaries, and 
 ### Python
 
 - **[Corbel](https://github.com/bnlucas/corbel)** — dataclass extension with mixins for validation, immutable updates, hashing, comparison, and JSON serialization, plus property-level metadata via `@corbel_property`.
-- **[Obfuskey](https://github.com/bnlucas/obfuskey)** — reversible, fixed-length obfuscated key generation from integers with bit-packing support.
-
-### TypeScript
-
-- **[Obfuskey.js](https://github.com/bnlucas/obfuskey-js)** — cross-platform port of Obfuskey using `BigInt`, safe across frontend, Node, and edge runtimes.
 
 These libraries are developed independently and are not affiliated with any employer.
 
