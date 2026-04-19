@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { DM_Sans, JetBrains_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
-import { SiteHeader } from "@/components/site-header";
-import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader, SiteFooter } from "@skeptik/ui";
+import { Monogram } from "@/components/monogram";
+import { Wordmark } from "@/components/wordmark";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -55,17 +56,63 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
 };
 
+const logo = (
+  <>
+    <Monogram size={26} />
+    <Wordmark className="text-base" />
+  </>
+);
+
+const nav = [
+  { href: "/about", label: "About" },
+  { href: "/projects", label: "Projects" },
+  { href: "/resume", label: "Resume" },
+];
+
+const footerLinkGroups = [
+  {
+    title: "Site",
+    links: [
+      { href: "/about", label: "About" },
+      { href: "/projects", label: "Projects" },
+      { href: "/resume", label: "Resume" },
+    ],
+  },
+  {
+    title: "Elsewhere",
+    links: [
+      { href: "mailto:nathan@bnlucas.com", label: "nathan@bnlucas.com" },
+      { href: "https://github.com/bnlucas", label: "GitHub", external: true },
+      { href: "https://linkedin.com/in/bnlucas88", label: "LinkedIn", external: true },
+    ],
+  },
+];
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${jetBrainsMono.variable}`}>
+    <html lang="en" className={`dark ${dmSans.variable} ${jetBrainsMono.variable}`}>
       <body className="flex min-h-screen flex-col font-sans">
-        <SiteHeader />
+        <SiteHeader
+          logo={logo}
+          nav={nav}
+          actions={[
+            { href: "https://github.com/bnlucas", label: "GitHub", variant: "outline", external: true },
+          ]}
+          maxWidth="max-w-5xl"
+        />
         <main className="flex-1">{children}</main>
-        <SiteFooter />
+        <SiteFooter
+          logo={logo}
+          description="Staff engineer building back-end platforms from scratch."
+          linkGroups={footerLinkGroups}
+          legal={{ holder: "Nathan Lucas" }}
+          trailingText="bnlucas.com"
+          maxWidth="max-w-5xl"
+        />
         <Analytics />
       </body>
     </html>
